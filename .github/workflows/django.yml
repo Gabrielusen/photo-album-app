@@ -24,14 +24,14 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-      working-directory: photo-album-app/
+      working-directory: photo_album_app/
 
     - name: Set PYTHONPATH
       run: |
-        export PYTHONPATH="$PYTHONPATH:$GITHUB_WORKSPACE/photo-album-app"
-      working-directory: photo-album-app/
+        export PYTHONPATH="$PYTHONPATH:$GITHUB_WORKSPACE/photo_album_app"
+      working-directory: photo_album_app/
 
     - name: Run tests
       run: |
         python manage.py test
-      working-directory: photo-album-app/
+      working-directory: photo-album-app/photo_album_app
